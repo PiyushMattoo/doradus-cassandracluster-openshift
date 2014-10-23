@@ -21,7 +21,7 @@ Config db server in the cluster for Doradus
 Add this upstream repo
 
     cd doradusdemo
-    git remote add upstream https://github.com/dell-oss/doradus-openshift-quickstart
+    git remote add upstream https://github.com/TraDuong1/doradus-cassandracluster-openshift
     git pull -s recursive -X theirs upstream master
 
 
