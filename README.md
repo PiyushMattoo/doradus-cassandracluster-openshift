@@ -1,7 +1,7 @@
 Doradus on OpenShift
 ===============================
 
-This is a simple Red Hat OpenShift example that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) as an OpenShift cartridge.  
+This is a simple Red Hat OpenShift example that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) in 1 gear that connects to cassandra instance on another gear.  
 
 
 Running on OpenShift
