@@ -1,7 +1,7 @@
 Doradus on OpenShift
 ===============================
 
-This is a simple Red Hat OpenShift example that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) as an OpenShift cartridge to connect to another Cassandra instance in another gear.
+This is a simple Red Hat OpenShift example that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) as an OpenShift cartridge.  
 
 
 Running on OpenShift
@@ -13,6 +13,10 @@ Create Do It Yourself (DIY) Application.
 Note that diy is OpenShift keyword. In this example, we will name our application "doradusdemo"
 
     rhc app create doradusdemo diy
+
+Config db server in the cluster for Doradus
+
+    rhc env set CASSANDRA_NODE_IP=<Cassandra_DB_IP> CASSANDRA_NODE_PORT=19160 DORADUS_STORAGE_SERVICE=com.dell.doradus.service.spider.SpiderService
 
 Add this upstream repo
 
