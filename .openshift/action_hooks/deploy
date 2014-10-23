@@ -1,0 +1,10 @@
+#!/bin/bash
+set -x
+if [ -d $OPENSHIFT_DATA_DIR/doradus-server ]
+then
+	exit 0
+else
+	cd $OPENSHIFT_DATA_DIR
+	cp $OPENSHIFT_REPO_DIR/doradus-server-2.2.tar.gz .
+	tar -xzvf doradus-server-2.2.tar.gz	
+fi

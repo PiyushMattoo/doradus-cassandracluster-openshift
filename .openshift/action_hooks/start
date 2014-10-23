@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -x
+
+cd $OPENSHIFT_DATA_DIR/doradus-server/bin/
+java -cp "../lib/*:../config/*" com.dell.doradus.core.DoradusServer -dbhost $CASSANDRA_NODE_IP -dbport $CASSANDRA_NODE_PORT -restaddr $OPENSHIFT_DIY_IP -restport $OPENSHIFT_DIY_PORT -storage_services $DORADUS_STORAGE_SERVICE
+export DORADUS_IP=$OPENSHIFT_DIY_IP
