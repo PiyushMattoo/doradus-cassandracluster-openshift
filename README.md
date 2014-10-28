@@ -18,6 +18,7 @@ Create Do It Yourself (DIY) Application.
 Config CQL cassandra node as part of the cluster above for Doradus
 
     cd doradus
+
     rhc env set CASSANDRA_NODE_IP=<CASSANDRA_NODE_IP> CASSANDRA_NODE_PORT=19042 DORADUS_STORAGE_SERVICE=com.dell.doradus.service.spider.SpiderService
 
 Check the environment variables are set
