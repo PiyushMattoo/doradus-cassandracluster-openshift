@@ -12,17 +12,20 @@ Create an account at https://www.openshift.com
 Setup cluster of 2 Cassandra nodes (https://github.com/dell-oss/cassandra-instance)
 
 Create Do It Yourself (DIY) Application. 
-Note that diy is OpenShift keyword. In this example, we will name our application "doradusdemo"
 
-    rhc app create doradusdemo diy
+    rhc app create doradus diy
 
-Config db server in the cluster for Doradus
+Config CQL cassandra node as part of the cluster above for Doradus
 
-    rhc env set CASSANDRA_NODE_IP=<CASSANDRA_NODE_IP> CASSANDRA_NODE_PORT=19160 DORADUS_STORAGE_SERVICE=com.dell.doradus.service.spider.SpiderService
+    cd doradus
+    rhc env set CASSANDRA_NODE_IP=<CASSANDRA_NODE_IP> CASSANDRA_NODE_PORT=19042 DORADUS_STORAGE_SERVICE=com.dell.doradus.service.spider.SpiderService
+
+Check the environment variables are set
+	
+    rhc env-list
 
 Add this upstream repo
 
-    cd doradusdemo
     git remote add upstream https://github.com/TraDuong1/doradus-cassandracluster-openshift
     git pull -s recursive -X theirs upstream master
 
