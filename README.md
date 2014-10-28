@@ -9,6 +9,8 @@ Running on OpenShift
 
 Create an account at https://www.openshift.com
 
+Setup cluster of 2 Cassandra nodes (https://github.com/dell-oss/cassandra-instance)
+
 Create Do It Yourself (DIY) Application. 
 Note that diy is OpenShift keyword. In this example, we will name our application "doradusdemo"
 
