@@ -22,7 +22,7 @@ Check if the private IP of 1st cassandra instance can be reached from cass2
     curl http://<CASSANDRA_NODE_IP>:19042
     
     (expect to see the message other than “curl: (7) couldn't connect to host”)
-    if you get that message, then you need to retry the step “Create Doradus instance” until Openshift gives you the environment that can connect to 1 of cassandra node.
+    if you get that message, then you need to retry the step “Create Doradus instance” until Openshift gives you the environment that can connect to 1 of Cassandra nodes.
 
 Config CQL cassandra node as part of the cluster above for Doradus
 
