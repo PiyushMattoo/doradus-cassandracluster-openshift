@@ -44,7 +44,10 @@ Then push the repo upstream
 
     git push
 
-Test
+Test 
+
+    Doradus APIs
+    ============
 
     Invoke this URL to list all applications under Doradus
     http://doradus-$yournamespace.$youropenshiftserver/_applications
@@ -77,5 +80,32 @@ Test
 
     Read more about REST APIs on the Doradus website.
 
+
+    Doradus High-availability
+    =========================
+
+    Bring down 1 cassandra node
+    
+    rhc app stop -a <cassandra_server1>
+
+    Verify http://doradusdemo-$yournamespace.$youropenshiftserver/_applications still works
+
+
+    Bring down both nodes
+    
+    rhc app stop -a <cassandra_server2>
+
+    You should expect the error
+
+
+    Restart the server
+    rhc app start -a <cassandra_server1>
+    rhc app start -a <cassandra_server2>
+    
+    Verify http://doradusdemo-$yournamespace.$youropenshiftserver/_applications works
+
+
+
+    
     
 
