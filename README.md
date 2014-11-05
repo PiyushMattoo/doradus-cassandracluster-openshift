@@ -16,7 +16,7 @@ Create Doradus instance
 
     rhc app create doradus diy
 
-Check if the private IP of 1st cassandra instance can be reached from cass2 
+Check if the private IP of 1st cassandra instance can be reached from Doradus enviroment 
    
     ssh <to the gear of doradus>
     curl http://<CASSANDRA_NODE_IP>:19042
