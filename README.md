@@ -47,7 +47,7 @@ Then push the repo upstream
 Test
 
     Invoke this URL to list all applications under Doradus
-    http://doradusdemo-$yournamespace.$youropenshiftserver/_applications
+    http://doradus-$yournamespace.$youropenshiftserver/_applications
     
     For the first time, you should expect to see empty list.
     
