@@ -10,18 +10,19 @@ Running on OpenShift
 Create an account at https://www.openshift.com
 
 Setup cluster of 2 Cassandra nodes (https://github.com/dell-oss/cassandra-instance)
+and note down the IP of 1 Cassandra node to use for CASSANDRA_NODE_IP below.
 
-Create Do It Yourself (DIY) Application. 
+Create Doradus instance
 
     rhc app create doradus diy
 
 Check if the private IP of 1st cassandra instance can be reached from cass2 
    
     ssh <to the gear of doradus>
-    curl http://<OPENSHIFT_DIY_IP of cass1>:19042
+    curl http://<CASSANDRA_NODE_IP>:19042
     
     (expect to see the message other than “curl: (7) couldn't connect to host”)
-    if you get that message, then you need to retry the step “Create the 2nd cassandra instance” until Openshift gives you the environment that can connect to the 1st instance.
+    if you get that message, then you need to retry the step “Create Doradus instance” until Openshift gives you the environment that can connect to 1 of cassandra node.
 
 Config CQL cassandra node as part of the cluster above for Doradus
 
