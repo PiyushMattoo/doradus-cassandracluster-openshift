@@ -15,6 +15,14 @@ Create Do It Yourself (DIY) Application.
 
     rhc app create doradus diy
 
+Check if the private IP of 1st cassandra instance can be reached from cass2 
+   
+    ssh <to the gear of doradus>
+    curl http://<OPENSHIFT_DIY_IP of cass1>:19042
+    
+    (expect to see the message other than “curl: (7) couldn't connect to host”)
+    if you get that message, then you need to retry the step “Create the 2nd cassandra instance” until Openshift gives you the environment that can connect to the 1st instance.
+
 Config CQL cassandra node as part of the cluster above for Doradus
 
     cd doradus
