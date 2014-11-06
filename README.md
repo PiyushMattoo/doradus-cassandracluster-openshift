@@ -76,7 +76,7 @@ Test
             </tables> 
         </application>
     
-    Invoke the URL http://doradusdemo-$yournamespace.$youropenshiftserver/_applications again to see the Doradus the application and its data.
+    Invoke the URL http://doradus-$yournamespace.$youropenshiftserver/_applications again to see the Doradus the application and its data.
 
     Read more about REST APIs on the Doradus website.
 
@@ -86,23 +86,19 @@ Test
 
     Bring down 1 cassandra node
     
-    rhc app stop -a <cassandra_server1>
-
-    Verify http://doradusdemo-$yournamespace.$youropenshiftserver/_applications still works
-
-
-    Bring down both nodes
-    
+    rhc app stop -a <cassandra_server1> 
+    or 
     rhc app stop -a <cassandra_server2>
 
-    You should expect the error
+    Verify http://doradus-$yournamespace.$youropenshiftserver/_applications still works
 
 
     Restart the server
     rhc app start -a <cassandra_server1>
+    or 
     rhc app start -a <cassandra_server2>
     
-    Verify http://doradusdemo-$yournamespace.$youropenshiftserver/_applications works
+    Verify http://doradus-$yournamespace.$youropenshiftserver/_applications works
 
 
 
