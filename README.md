@@ -84,7 +84,7 @@ Test
     Doradus High-availability
     =========================
 
-    Bring down 1 cassandra node
+    Bring down 1 of cassandra nodes
     
     rhc app stop -a <cassandra_server1> 
     or 
@@ -94,6 +94,7 @@ Test
 
 
     Restart the server
+
     rhc app start -a <cassandra_server1>
     or 
     rhc app start -a <cassandra_server2>
