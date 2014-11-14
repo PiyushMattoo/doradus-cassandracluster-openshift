@@ -1,13 +1,15 @@
 Doradus on OpenShift
 ===============================
 
-This is a simple Red Hat OpenShift example that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) in one gear that connects to Cassandra instance on another gear.  
+This is a Red Hat OpenShift prototype that demonstrates how to deploy and use Doradus (https://github.com/dell-oss/Doradus) deployed in one gear that connects to Cluster of Cassandra nodes on other gears on the same OpenShift broker.  
 
 
 Running on OpenShift
 ----------------------------
 
-Create an account at https://www.openshift.com
+Create an OpenShift account at https://www.openshift.com
+
+Set up the OpenShift Environment (https://developers.openshift.com/en/getting-started-client-tools.html)
 
 Setup cluster of 2 Cassandra nodes (https://github.com/dell-oss/cassandra-instance)
 and note down the IP of 1 Cassandra node to use for CASSANDRA_NODE_IP below.
