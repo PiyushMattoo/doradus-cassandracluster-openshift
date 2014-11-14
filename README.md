@@ -11,7 +11,7 @@ Create an OpenShift account at https://www.openshift.com
 
 Set up the OpenShift Environment (https://developers.openshift.com/en/getting-started-client-tools.html)
 
-Set up amcluster of 2 Cassandra nodes (using https://github.com/dell-oss/cassandra-instance)
+Set up a cluster of 2 Cassandra nodes (using https://github.com/dell-oss/cassandra-instance)
 and note down the IP of 1 Cassandra node to use for CASSANDRA_NODE_IP below.
 
 Create Doradus instance
