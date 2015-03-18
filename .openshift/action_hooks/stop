@@ -1,6 +1,10 @@
 #!/bin/bash
 # The logic to stop your application should be put in this script.
 set -x
-kill `ps -ef | grep Doradus | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+if [ -z "$(ps -ef | grep Doradus | grep -v grep)" ]; then
+echo "Doradus is already stopped"
+else
+  kill `ps -ef | grep Doradus | grep -v grep | awk '{ print $2 }'`
+fi
 
 exit 0
